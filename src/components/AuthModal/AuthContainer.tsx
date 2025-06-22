@@ -16,7 +16,7 @@ const AuthContainer = ({ onLogin }: Props) => {
   const location = useLocation();
   const currentPath = location.pathname.replace("/", "");
 
-  const [isLoginStep, setIsLoginStep] = useState(false);
+  const [isLoginStep, setIsLoginStep] = useState(true);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
