@@ -45,13 +45,16 @@ const Feed = ({
   };
 
   const handleFeatureUnavailable = () => {
-    console.warn("Feature is not available yet!");
     if (user.userName) {
       setIsModalOpen(true);
     }
   };
 
   const handleCreatePost = (content: string) => {
+    if (!user.userName || !content.trim()) {
+      return;
+    }
+
     const newPost: Post = {
       id: Date.now().toString(),
       user: {
@@ -70,7 +73,11 @@ const Feed = ({
 
   return (
     <>
-      <section className="feed" onClick={handleCheckIfUserLoggedIn}>
+      <section
+        className="feed"
+        onClick={handleCheckIfUserLoggedIn}
+        aria-hidden={isModalOpen}
+      >
         <CreatePost
           handleCreatePost={handleCreatePost}
           handleClick={handleFeatureUnavailable}

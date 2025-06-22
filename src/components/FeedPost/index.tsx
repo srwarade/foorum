@@ -28,7 +28,7 @@ const FeedPost = ({
   const formattedTime =
     diffInMinutes < 60
       ? dayjs(postedAt).fromNow()
-      : dayjs(postedAt).format("D MMM YYYY, hh A");
+      : dayjs(postedAt).format("DD MMM YYYY, hh:mm A");
 
   return (
     <div className="feed-post">

@@ -10,7 +10,7 @@ type Props = {
 
 const AuthModal = ({ onLogin }: Props) => {
   return (
-    <section className="auth-modal">
+    <section className="auth-modal" role="dialog" aria-modal="true">
       <AuthContainer onLogin={onLogin} />
     </section>
   );
