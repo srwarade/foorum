@@ -6,6 +6,7 @@ import Feed from "./components/Feed/index.tsx";
 import AuthContainer from "./components/AuthModal/AuthContainer.tsx";
 
 import { LOCAL_STORAGE_KEY } from "./constants/common";
+import { ROUTES } from "./constants/routes.ts";
 
 import type { User } from "./types/common.ts";
 
@@ -39,14 +40,10 @@ function App() {
       <div className="App">
         <Routes>
           <Route
-            path="/"
+            path={ROUTES.HOME}
             element={
               <>
-                <Header
-                  user={user}
-                  handleLogout={handleLogout}
-                  setIsLoginOpen={setIsAuthModalOpen}
-                />
+                <Header user={user} handleLogout={handleLogout} />
                 <Feed
                   user={user}
                   isAuthModalOpen={isAuthModalOpen}
@@ -57,14 +54,10 @@ function App() {
             }
           />
           <Route
-            path="/login"
+            path={ROUTES.LOGIN}
             element={
               <>
-                <Header
-                  user={user}
-                  handleLogout={handleLogout}
-                  setIsLoginOpen={setIsAuthModalOpen}
-                />
+                <Header user={user} handleLogout={handleLogout} />
                 <AuthContainer onLogin={handleLogin} />
               </>
             }
