@@ -1,0 +1,131 @@
+.auth-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.auth-container {
+  background-color: #eaeaea;
+  padding: 10px;
+  border-radius: 24px;
+  max-width: 460px;
+  margin: auto;
+
+  &.login {
+    margin-top: 60px;
+  }
+
+  .auth-content {
+    background-color: #fff;
+    padding: 28px 48px 36px;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .login-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #f0f0f0;
+
+      > img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #3c3c3c;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 400;
+      color: #b1b1b1;
+      margin-block: 4px 48px;
+    }
+
+    .auth-label {
+      font-size: 14px;
+      color: #3c3c3c;
+      font-weight: 600;
+      align-self: flex-start;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      height: 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #f5f5f5;
+    }
+
+    input::placeholder {
+      color: #a9a9a9;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    button {
+      height: 44px;
+      width: calc(100% + 20px);
+      padding: 10px 20px;
+      background-color: #3f52e9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 12px;
+
+      &:hover {
+        background-color: #2338db;
+      }
+    }
+  }
+
+  .auth-footer {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0 12px;
+    font-size: 14px;
+    color: #8d8d8d;
+
+    button {
+      color: #3f52e9;
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+      font-weight: 600;
+
+      &:hover {
+        color: #2338db;
+      }
+    }
+  }
+
+  .error {
+    color: rgb(222, 5, 5);
+    margin-block: 0 12px;
+    align-self: flex-start;
+    font-size: 12px;
+  }
+}

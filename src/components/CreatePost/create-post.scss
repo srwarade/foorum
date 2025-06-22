@@ -1,0 +1,63 @@
+.create-post-container {
+  min-height: 200px;
+  position: relative;
+
+  .main-container {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+
+    > img {
+      margin-top: -6px;
+    }
+
+    textarea {
+      width: 100%;
+      border: none;
+      color: #3c3c3c;
+      line-height: 1.4;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .post-actions-container {
+    width: 100%;
+    margin-left: -12px;
+    position: absolute;
+    padding-block: 4px;
+    bottom: 0px;
+    border-top: solid 1px #d3d3d3;
+    display: flex;
+    justify-content: space-between;
+
+    .create-post-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-inline: 12px;
+
+      > img {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        &:first-child {
+          width: 16px;
+          height: 16px;
+          background-color: #e6e6e6;
+          padding: 4px;
+          border-radius: 6px;
+        }
+      }
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+}
