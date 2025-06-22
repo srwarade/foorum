@@ -72,7 +72,11 @@ const AuthContainer = ({ onLogin }: Props) => {
   };
 
   return (
-    <div className={`auth-container ${currentPath}`}>
+    <div
+      className={`auth-container ${currentPath} ${
+        isLoginStep ? "signin" : "signup"
+      }`}
+    >
       <div className="auth-content">
         <AuthHeader isLoginStep={isLoginStep} />
 

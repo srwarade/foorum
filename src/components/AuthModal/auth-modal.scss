@@ -17,6 +17,17 @@
   border-radius: 24px;
   max-width: 460px;
   margin: auto;
+  animation: modalFadeIn 0.5s ease-out forwards;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+
+  &.signin {
+    animation-name: slideInFromLeft;
+  }
+
+  &.signup {
+    animation-name: slideInFromRight;
+  }
 
   &.login {
     margin-top: 60px;
@@ -127,5 +138,38 @@
     margin-block: 0 12px;
     align-self: flex-start;
     font-size: 12px;
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
