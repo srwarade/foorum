@@ -2,8 +2,8 @@ import "./option-palette.scss";
 
 const OptionPalette = ({ handleClick }: { handleClick: () => void }) => {
   return (
-    <div className="option-palette" onClick={handleClick}>
-      <div className="options">
+    <div className="option-palette">
+      <div className="options" onClick={handleClick}>
         <button>
           Paraghraph
           <img src="images/option-palette/chevron.png" alt="chevron" />
@@ -20,7 +20,7 @@ const OptionPalette = ({ handleClick }: { handleClick: () => void }) => {
         <img src="images/option-palette/quote.png" alt="quote" />
         <img src="images/option-palette/code.png" alt="code" />
       </div>
-      <div className="delete-icon">
+      <div className="delete-icon" onClick={handleClick}>
         <img src="images/option-palette/delete.png" alt="delete" />
       </div>
     </div>
